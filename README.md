@@ -10,9 +10,12 @@ they call the init function.
 
 Current Data Structures:
 - Doubly Linked List (dllist.h)
+- Hashmap (hashmap.c & hashmap.h)
+
+TODO:
+- implement some form of open hashing for the hashmap (currently chain hashing).
 
 Future Data Structures:
-- Hashmap
 - Heap
 - Stack
 - Tree

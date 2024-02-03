@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "llnode.h"
+#include "../dllist.h"
 
 #define Var(type, name, value) type name = value
 
