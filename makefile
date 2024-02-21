@@ -1,8 +1,14 @@
-CC = clang
-CFLAGS = -Wall # Flag to pass to clang
+CC = gcc
+CFLAGS = -Wall -Werror -std=c99 -g
+OBJ = list.o
 
-hashmap.o: hashmap.c
-	$(CC) $(CFLAGS) -c hashmap.c
+%.o: %.c
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+all: $(OBJ)
+
+tests: $(OBJ)
+	$(CC) -g -o tests/tester tests/tester.c $^ $(CFLAGS)
 
 clean:
-	rm hashmap.o
+	rm -f *.o tests/*.o
