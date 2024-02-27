@@ -1,7 +1,3 @@
-//
-// Created by Jacob McDonnell on 2/21/24.
-//
-
 #ifndef LIST_H
 #define LIST_H
 #include <stddef.h>
