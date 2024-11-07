@@ -2,13 +2,13 @@ CC = gcc
 CFLAGS = -Wall -Werror -std=c99 -g
 OBJ = list.o hashmap.o
 
-%.o: %.c
-	$(CC) -c -o $@ $< $(CFLAGS)
+%.o: %.c %.h
+	$(CC) -c $< $(CFLAGS)
 
 all: $(OBJ)
 
-tests: $(OBJ)
-	$(CC) -g -o tests/tester tests/tester.c $^ $(CFLAGS)
+tests: tests/tester.o $(OBJ)
+	$(CC) -o tests/tester $^ $(CFLAGS)
 
 clean:
 	rm -f *.o tests/*.o tests/tester
